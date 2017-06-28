@@ -72,6 +72,16 @@ gluster/block:
 	make container
 .PHONY: gluster/block
 
+snapshot:
+	cd snapshot; \
+	make
+.PHONY: snapshot
+
+snapshot-clean:
+	cd snapshot; \
+	make clean
+.PHONY: snapshot-clean
+
 clean-gluster/block:
 	cd gluster/block; \
 	make clean

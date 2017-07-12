@@ -46,12 +46,28 @@ import:
   subpackages:
   - pkg/util/goroutinemap
   - pkg/util/version
-- package: github.com/heketi/heketi/client/api/go-client
+- package: github.com/heketi/heketi
   version: 7a54b6fc903feab1e7cb6573177ca09b544eb1e2
-- package: github.com/heketi/heketi/pkg/glusterfs/api
-  version: 7a54b6fc903feab1e7cb6573177ca09b544eb1e2
-- package: github.com/heketi/heketi/pkg/utils
-  version: 7a54b6fc903feab1e7cb6573177ca09b544eb1e2
+  subpackages:
+  - client/api/go-client
+  - pkg/glusterfs/api
+  - pkg/utils
 - package: github.com/lpabon/godbc
   version: 9577782540c1398b710ddae1b86268ba03a19b0c
 - package: github.com/dgrijalva/jwt-go
+- package: k8s.io/apiextensions-apiserver
+  version: fbe70034cb9becd97bf8b6207f918c73cadd330e
+  subpackages:
+  - pkg/apis/apiextensions
+  - pkg/apis/apiextensions/v1beta1
+  - pkg/client/clientset/clientset
+  - pkg/client/clientset/clientset/scheme
+  - pkg/client/clientset/clientset/typed/apiextensions/v1beta1
+- package: k8s.io/apiserver
+  version: 087d1a2efeb6296f04bb0f54e7af9890052aa6d7
+  subpackages:
+  - pkg/authentication/authenticator
+  - pkg/authentication/serviceaccount
+  - pkg/authentication/user
+  - pkg/features
+  - pkg/util/feature
